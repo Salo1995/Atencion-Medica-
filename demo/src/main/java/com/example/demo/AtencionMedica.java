@@ -2,45 +2,83 @@ package com.example.demo;
 
 public class AtencionMedica {
     private int id;
-    private String titulo;
-    private int año;
-    private String director;
-    private String genero;
-    private String sinopsis;
+    private String nombrePaciente;
+    private String rutPaciente;
+    private String direccionPaciente;
+    private String motivoConsulta;
+    private String diagnostico;
+    private String tratamiento;
+    private String medicamentosRecetados;
+    private String fechaConsulta;
+    private String doctorAsignado;
+    private String estado;
+    private String comentarios;
 
-    public AtencionMedica(int id, String titulo, int año, String director, String genero, String sinopsis)
+    public AtencionMedica(int id, String nombrePaciente, String rutPaciente, String direccionPaciente, String motivoConsulta,
+                          String diagnostico, String tratamiento, String medicamentosRecetados, String fechaConsulta,
+                          String doctorAsignado, String estado, String comentarios)
     {
-     this.id = id;
-     this.titulo = titulo;
-     this.año = año;
-     this.director = director;
-     this.genero = genero;
-     this.sinopsis = sinopsis;    
+        this.id = id;
+        this.nombrePaciente = nombrePaciente;
+        this.rutPaciente = rutPaciente;
+        this.direccionPaciente = direccionPaciente;
+        this.motivoConsulta = motivoConsulta;
+        this.diagnostico = diagnostico;
+        this.tratamiento = tratamiento;
+        this.medicamentosRecetados = medicamentosRecetados;
+        this.fechaConsulta = fechaConsulta;
+        this.doctorAsignado = doctorAsignado;
+        this.estado = estado;
+        this.comentarios = comentarios;
     }
-public int getId (){
-    return id;
-} 
 
-public String getTitulo (){
-    return titulo;
+    // Gets
+
+    public int getId() {
+        return id;
+    }
+
+    public String getNombrePaciente() {
+        return nombrePaciente;
+    }
+
+    public String getRutPaciente() {
+        return rutPaciente;
+    }
+
+    public String getDireccionPaciente() {
+        return direccionPaciente;
+    }
+
+    public String getMotivoConsulta() {
+        return motivoConsulta;
+    }
+
+    public String getDiagnostico() {
+        return diagnostico;
+    }
+
+    public String getTratamiento() {
+        return tratamiento;
+    }
+
+    public String getMedicamentosRecetados() {
+        return medicamentosRecetados;
+    }
+
+    public String getFechaConsulta() {
+        return fechaConsulta;
+    }
+
+    public String getDoctorAsignado() {
+        return doctorAsignado;
+    }
+
+    public String getEstado() {
+        return estado;
+    }
+
+    public String getComentarios() {
+        return comentarios;
+    }
 }
-
-public int getAño (){
-    return año;
-}
-
-public String getDirector (){
-    return director;
-}
-
-public String getGenero (){
-    return genero;
-}
-
-public String getSinopsis (){
-    return sinopsis;
-}
-
-}
-
-
