@@ -1,9 +1,9 @@
 package com.example.demo;
 
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 import java.util.List;
 import java.util.ArrayList;
-import org.springframework.web.bind.annotation.GetMapping;
 
 @RestController
 public class AtencionMedicaController {
@@ -16,17 +16,17 @@ public class AtencionMedicaController {
     }
 
     @GetMapping("/atenciones")
-    public List <AtencionMedica> getAtencionesMedicas() {
+    public List<AtencionMedica> getAtencionesMedicas() {
         return atencionesMedicas;
     }
 
     @GetMapping("/atenciones/{id}")
-    public AtencionMedica getAtencionMedicaPorId(@PathVariable int id) {
-        for (AtencionMedica atencion : atencionesMedicas){
+    public ResponseEntity<AtencionMedica> getAtencionMedicaPorId(@PathVariable int id) {
+        for (AtencionMedica atencion : atencionesMedicas) {
             if (atencion.getId() == id) {
-                return atencion;
+                return ResponseEntity.ok(atencion);
             }
         }
-        return null;
+        return ResponseEntity.notFound().build();
     }
 }
