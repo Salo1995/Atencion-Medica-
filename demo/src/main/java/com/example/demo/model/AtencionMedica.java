@@ -1,4 +1,8 @@
 package com.example.demo.model;
+
+import jakarta.persistence.Entity;
+
+@Entity
 public class AtencionMedica {
     private int idAtencion;
     private int idPaciente;
@@ -10,8 +14,10 @@ public class AtencionMedica {
     private String doctorAsignado;
     private String estado;
     private String comentarios;
-
-    // Constructor
+    //constructor sin argumentos
+    public AtencionMedica() {
+    }   
+    // Constructor con los argumentos
     public AtencionMedica(int idAtencion, int idPaciente, String motivoConsulta, String diagnostico, String tratamiento,
                           String medicamentosRecetados, String fechaConsulta, String doctorAsignado, String estado,
                           String comentarios) {
@@ -26,6 +32,7 @@ public class AtencionMedica {
         this.estado = estado;
         this.comentarios = comentarios;
     }
+    
 
     // Getters y Setters
     public int getIdAtencion() {
@@ -108,3 +115,4 @@ public class AtencionMedica {
         this.comentarios = comentarios;
     }
 }
+
